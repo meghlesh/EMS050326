@@ -29,7 +29,7 @@
 
 //     try {
 //       const token = localStorage.getItem("accessToken");
-//       await axios.delete(`https://api-emsdev-be-epb9fbg0e7ewese6.southindia-01.azurewebsites.net/soft/deleteEmployee/${id}`, {
+//       await axios.delete(`https://api-tmsdev-be-ede3ccg8dxd3awbw.southindia-01.azurewebsites.net/soft/deleteEmployee/${id}`, {
 //         headers: { Authorization: `Bearer ${token}` },
 //       });
 
@@ -50,7 +50,7 @@
 
 //   //   try {
 //   //     const token = localStorage.getItem("accessToken");
-//   //     const res = await axios.delete(`https://api-emsdev-be-epb9fbg0e7ewese6.southindia-01.azurewebsites.net/deleteEmployee/${id}`, {
+//   //     const res = await axios.delete(`https://api-tmsdev-be-ede3ccg8dxd3awbw.southindia-01.azurewebsites.net/deleteEmployee/${id}`, {
 //   //       headers: { Authorization: `Bearer ${token}` },
 //   //     });
 
@@ -78,7 +78,7 @@
 
 //   try {
 //     const token = localStorage.getItem("accessToken");
-//     const res = await axios.delete(`https://api-emsdev-be-epb9fbg0e7ewese6.southindia-01.azurewebsites.net/deleteEmployee/${id}`, {
+//     const res = await axios.delete(`https://api-tmsdev-be-ede3ccg8dxd3awbw.southindia-01.azurewebsites.net/deleteEmployee/${id}`, {
 //       headers: { Authorization: `Bearer ${token}` },
 //     });
 
@@ -108,7 +108,7 @@
 //     const fetchEmployees = async () => {
 //       try {
 //         const token = localStorage.getItem("accessToken");
-//         const res = await axios.get("https://api-emsdev-be-epb9fbg0e7ewese6.southindia-01.azurewebsites.net/getAllEmployees", {
+//         const res = await axios.get("https://api-tmsdev-be-ede3ccg8dxd3awbw.southindia-01.azurewebsites.net/getAllEmployees", {
 //           headers: { Authorization: `Bearer ${token}` },
 //         });
 //         setEmployees(res.data || []);
@@ -142,7 +142,7 @@
 //     try {
 //       const token = localStorage.getItem("accessToken");
 //       await axios.put(
-//         `https://api-emsdev-be-epb9fbg0e7ewese6.southindia-01.azurewebsites.net/users/${selectedEmployee._id}/assign-manager`,
+//         `https://api-tmsdev-be-ede3ccg8dxd3awbw.southindia-01.azurewebsites.net/users/${selectedEmployee._id}/assign-manager`,
 //         { managerId: selectedManagerId },
 //         { headers: { Authorization: `Bearer ${token}` } }
 //       );
@@ -516,7 +516,7 @@ function AllEmployeeDetails() {
 
     try {
       const token = localStorage.getItem("accessToken");
-      await axios.delete(`https://api-emsdev-be-epb9fbg0e7ewese6.southindia-01.azurewebsites.net/soft/deleteEmployee/${id}`, {
+      await axios.delete(`https://api-tmsdev-be-ede3ccg8dxd3awbw.southindia-01.azurewebsites.net/soft/deleteEmployee/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
 
@@ -543,7 +543,7 @@ function AllEmployeeDetails() {
 
     try {
       const token = localStorage.getItem("accessToken");
-      const res = await axios.delete(`https://api-emsdev-be-epb9fbg0e7ewese6.southindia-01.azurewebsites.net/deleteEmployee/${id}`, {
+      const res = await axios.delete(`https://api-tmsdev-be-ede3ccg8dxd3awbw.southindia-01.azurewebsites.net/deleteEmployee/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
 
@@ -570,7 +570,7 @@ function AllEmployeeDetails() {
     const fetchEmployees = async () => {
       try {
         const token = localStorage.getItem("accessToken");
-        const res = await axios.get("https://api-emsdev-be-epb9fbg0e7ewese6.southindia-01.azurewebsites.net/getAllEmployees", {
+        const res = await axios.get("https://api-tmsdev-be-ede3ccg8dxd3awbw.southindia-01.azurewebsites.net/getAllEmployees", {
           headers: { Authorization: `Bearer ${token}` },
         });
         //Geetanjali
@@ -623,7 +623,7 @@ function AllEmployeeDetails() {
     try {
       const token = localStorage.getItem("accessToken");
       await axios.put(
-        `https://api-emsdev-be-epb9fbg0e7ewese6.southindia-01.azurewebsites.net/users/${selectedEmployee._id}/assign-manager`,
+        `https://api-tmsdev-be-ede3ccg8dxd3awbw.southindia-01.azurewebsites.net/users/${selectedEmployee._id}/assign-manager`,
         { managerId: selectedManagerId },
         { headers: { Authorization: `Bearer ${token}` } }
       );

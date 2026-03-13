@@ -16,7 +16,7 @@ function OfficeLocationSetup() {
   // ✅ Fetch existing office location
   useEffect(() => {
     axios
-      .get("https://api-emsdev-be-epb9fbg0e7ewese6.southindia-01.azurewebsites.net/admin/office-location")
+      .get("https://api-tmsdev-be-ede3ccg8dxd3awbw.southindia-01.azurewebsites.net/admin/office-location")
       .then((res) => {
         if (res.data.length) setLocation(res.data[0]);
       })
@@ -77,7 +77,7 @@ function OfficeLocationSetup() {
     setLoading(true);
 
     axios
-      .post("https://api-emsdev-be-epb9fbg0e7ewese6.southindia-01.azurewebsites.net/admin/office-location", editLocation)
+      .post("https://api-tmsdev-be-ede3ccg8dxd3awbw.southindia-01.azurewebsites.net/admin/office-location", editLocation)
       .then(() => {
         setLocation(editLocation); // ✅ Update page only now
         alert("Office location saved");

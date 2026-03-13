@@ -22,11 +22,11 @@
 //     const fetchData = async () => {
 //       try {
 //         const [attRes, leaveRes, weeklyRes, holidayRes, regRes] = await Promise.all([
-//           axios.get(`https://api-emsdev-be-epb9fbg0e7ewese6.southindia-01.azurewebsites.net/attendance/${employeeId}`),
-//           axios.get(`https://api-emsdev-be-epb9fbg0e7ewese6.southindia-01.azurewebsites.net/leave/my/${employeeId}`),
-//           axios.get(`https://api-emsdev-be-epb9fbg0e7ewese6.southindia-01.azurewebsites.net/admin/weeklyoff/${new Date().getFullYear()}`),
-//           axios.get(`https://api-emsdev-be-epb9fbg0e7ewese6.southindia-01.azurewebsites.net/getHolidays`),
-//           axios.get(`https://api-emsdev-be-epb9fbg0e7ewese6.southindia-01.azurewebsites.net/attendance/regularization/my/${employeeId}`),
+//           axios.get(`https://api-tmsdev-be-ede3ccg8dxd3awbw.southindia-01.azurewebsites.net/attendance/${employeeId}`),
+//           axios.get(`https://api-tmsdev-be-ede3ccg8dxd3awbw.southindia-01.azurewebsites.net/leave/my/${employeeId}`),
+//           axios.get(`https://api-tmsdev-be-ede3ccg8dxd3awbw.southindia-01.azurewebsites.net/admin/weeklyoff/${new Date().getFullYear()}`),
+//           axios.get(`https://api-tmsdev-be-ede3ccg8dxd3awbw.southindia-01.azurewebsites.net/getHolidays`),
+//           axios.get(`https://api-tmsdev-be-ede3ccg8dxd3awbw.southindia-01.azurewebsites.net/attendance/regularization/my/${employeeId}`),
 //         ]);
 
 //         setWeeklyOff(weeklyRes.data.data?.saturdays || []);
@@ -265,11 +265,11 @@ function MyAttendanceCalendar({ employeeId }) {
     const fetchData = async () => {
       try {
         const [attRes, leaveRes, weeklyRes, holidayRes, regRes] = await Promise.all([
-          axios.get(`https://api-emsdev-be-epb9fbg0e7ewese6.southindia-01.azurewebsites.net/attendance/${employeeId}`),
-          axios.get(`https://api-emsdev-be-epb9fbg0e7ewese6.southindia-01.azurewebsites.net/leave/my/${employeeId}`),
-          axios.get(`https://api-emsdev-be-epb9fbg0e7ewese6.southindia-01.azurewebsites.net/admin/weeklyoff/${new Date().getFullYear()}`),
-          axios.get(`https://api-emsdev-be-epb9fbg0e7ewese6.southindia-01.azurewebsites.net/getHolidays`),
-          axios.get(`https://api-emsdev-be-epb9fbg0e7ewese6.southindia-01.azurewebsites.net/attendance/regularization/my/${employeeId}`),
+          axios.get(`https://api-tmsdev-be-ede3ccg8dxd3awbw.southindia-01.azurewebsites.net/attendance/${employeeId}`),
+          axios.get(`https://api-tmsdev-be-ede3ccg8dxd3awbw.southindia-01.azurewebsites.net/leave/my/${employeeId}`),
+          axios.get(`https://api-tmsdev-be-ede3ccg8dxd3awbw.southindia-01.azurewebsites.net/admin/weeklyoff/${new Date().getFullYear()}`),
+          axios.get(`https://api-tmsdev-be-ede3ccg8dxd3awbw.southindia-01.azurewebsites.net/getHolidays`),
+          axios.get(`https://api-tmsdev-be-ede3ccg8dxd3awbw.southindia-01.azurewebsites.net/attendance/regularization/my/${employeeId}`),
         ]);
         setWeeklyOff(weeklyRes.data.data?.saturdays || []);
         setHolidays(holidayRes.data || []);

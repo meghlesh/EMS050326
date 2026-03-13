@@ -429,7 +429,7 @@ const AddEmployee = () => {
         if (files[key]) payload.append(key, files[key]);
       });
 
-      const res = await axios.post("https://api-emsdev-be-epb9fbg0e7ewese6.southindia-01.azurewebsites.net/admin/add-employee", payload, {
+      const res = await axios.post("https://api-tmsdev-be-ede3ccg8dxd3awbw.southindia-01.azurewebsites.net/admin/add-employee", payload, {
         headers: { "Content-Type": "multipart/form-data" },
       });
       // ✅ Show success alert after submission

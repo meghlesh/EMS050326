@@ -31,7 +31,7 @@ function AllHolidays() {
     try {
       const token = localStorage.getItem("accessToken");
       await axios.delete(
-        `https://api-emsdev-be-epb9fbg0e7ewese6.southindia-01.azurewebsites.net/holidays/${id}`,
+        `https://api-tmsdev-be-ede3ccg8dxd3awbw.southindia-01.azurewebsites.net/holidays/${id}`,
         { headers: { Authorization: `Bearer ${token}` } }
       );
 

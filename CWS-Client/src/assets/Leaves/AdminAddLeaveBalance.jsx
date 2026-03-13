@@ -30,7 +30,7 @@ function AdminAddLeaveBalance() {
   //NEW CODE
   useEffect(() => {
     axios
-      .get("https://api-emsdev-be-epb9fbg0e7ewese6.southindia-01.azurewebsites.net/leaves")
+      .get("https://api-tmsdev-be-ede3ccg8dxd3awbw.southindia-01.azurewebsites.net/leaves")
       .then((res) => {
         const sortedLeaves = res.data.sort(
           (a, b) => new Date(b.appliedAt) - new Date(a.appliedAt)
@@ -53,7 +53,7 @@ function AdminAddLeaveBalance() {
     if (!token) return;
 
     axios
-      .get("https://api-emsdev-be-epb9fbg0e7ewese6.southindia-01.azurewebsites.net/me", {
+      .get("https://api-tmsdev-be-ede3ccg8dxd3awbw.southindia-01.azurewebsites.net/me", {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((res) => setUser(res.data))
@@ -63,7 +63,7 @@ function AdminAddLeaveBalance() {
   // 🔹 Fetch all leaves
   useEffect(() => {
     axios
-      .get("https://api-emsdev-be-epb9fbg0e7ewese6.southindia-01.azurewebsites.net/leaves")
+      .get("https://api-tmsdev-be-ede3ccg8dxd3awbw.southindia-01.azurewebsites.net/leaves")
       .then((res) => {
         const sortedLeaves = res.data.sort(
           (a, b) => new Date(b.appliedAt) - new Date(a.appliedAt)
@@ -82,7 +82,7 @@ function AdminAddLeaveBalance() {
   //   if (!user?._id) return;
 
   //   try {
-  //     await axios.put(`https://api-emsdev-be-epb9fbg0e7ewese6.southindia-01.azurewebsites.net/leave/${leaveId}/status`, {
+  //     await axios.put(`https://api-tmsdev-be-ede3ccg8dxd3awbw.southindia-01.azurewebsites.net/leave/${leaveId}/status`, {
   //       status,
   //       userId: user._id,
   //       role: "admin",
@@ -104,7 +104,7 @@ function AdminAddLeaveBalance() {
   if (!user?._id) return;
 
   try {
-    await axios.put(`https://api-emsdev-be-epb9fbg0e7ewese6.southindia-01.azurewebsites.net/leave/${leaveId}/status`, {
+    await axios.put(`https://api-tmsdev-be-ede3ccg8dxd3awbw.southindia-01.azurewebsites.net/leave/${leaveId}/status`, {
       status,
       userId: user._id,
       role: "admin",
@@ -138,7 +138,7 @@ function AdminAddLeaveBalance() {
 
   // const grantYearly = async () => {
   //   try {
-  //     const res = await axios.post("https://api-emsdev-be-epb9fbg0e7ewese6.southindia-01.azurewebsites.net/leave/grant-yearly", {
+  //     const res = await axios.post("https://api-tmsdev-be-ede3ccg8dxd3awbw.southindia-01.azurewebsites.net/leave/grant-yearly", {
   //       sl,
   //       cl,
   //     });
@@ -155,7 +155,7 @@ function AdminAddLeaveBalance() {
   const [data, setData] = useState([]);
   const fetchYearlySettings = async () => {
     try {
-      const res = await axios.get("https://api-emsdev-be-epb9fbg0e7ewese6.southindia-01.azurewebsites.net/leave/yearly-settings");
+      const res = await axios.get("https://api-tmsdev-be-ede3ccg8dxd3awbw.southindia-01.azurewebsites.net/leave/yearly-settings");
       setData(res.data);
     } catch (err) {
       console.error("Error fetching yearly settings:", err);
@@ -170,7 +170,7 @@ function AdminAddLeaveBalance() {
 
   const grantYearly = async () => {
     try {
-      const res = await axios.post("https://api-emsdev-be-epb9fbg0e7ewese6.southindia-01.azurewebsites.net/leave/grant-yearly", {
+      const res = await axios.post("https://api-tmsdev-be-ede3ccg8dxd3awbw.southindia-01.azurewebsites.net/leave/grant-yearly", {
         sl,
         cl,
       });
@@ -201,7 +201,7 @@ function AdminAddLeaveBalance() {
 
   const grantMonthly = async () => {
     try {
-      const res = await axios.post("https://api-emsdev-be-epb9fbg0e7ewese6.southindia-01.azurewebsites.net/leave/grant-monthly", {
+      const res = await axios.post("https://api-tmsdev-be-ede3ccg8dxd3awbw.southindia-01.azurewebsites.net/leave/grant-monthly", {
         sl,
         cl,
       });
@@ -217,7 +217,7 @@ function AdminAddLeaveBalance() {
 
   const fetchLeaveBalance = async () => {
     try {
-      const res = await axios.get("https://api-emsdev-be-epb9fbg0e7ewese6.southindia-01.azurewebsites.net/leave/balance");
+      const res = await axios.get("https://api-tmsdev-be-ede3ccg8dxd3awbw.southindia-01.azurewebsites.net/leave/balance");
       console.log("data", res.data
 
       )
@@ -269,7 +269,7 @@ function AdminAddLeaveBalance() {
     if (!confirmDelete) return;
 
     try {
-      await axios.delete(`https://api-emsdev-be-epb9fbg0e7ewese6.southindia-01.azurewebsites.net/leave/${leaveId}`);
+      await axios.delete(`https://api-tmsdev-be-ede3ccg8dxd3awbw.southindia-01.azurewebsites.net/leave/${leaveId}`);
 
       // ✅ Remove the deleted leave from state
       setLeaves((prev) => prev.filter((l) => l._id !== leaveId));
@@ -288,7 +288,7 @@ function AdminAddLeaveBalance() {
   //   }
 
   //   try {
-  //     const res = await axios.post("https://api-emsdev-be-epb9fbg0e7ewese6.southindia-01.azurewebsites.net/leave/reset-all");
+  //     const res = await axios.post("https://api-tmsdev-be-ede3ccg8dxd3awbw.southindia-01.azurewebsites.net/leave/reset-all");
   //     setMessage(`${res.data.message} (${res.data.count} employees affected) ✅`);
   //   } catch (err) {
   //     console.error("Error resetting leave balances:", err);
@@ -308,7 +308,7 @@ function AdminAddLeaveBalance() {
     }
 
     try {
-      const res = await axios.delete("https://api-emsdev-be-epb9fbg0e7ewese6.southindia-01.azurewebsites.net/leave/reset-all");
+      const res = await axios.delete("https://api-tmsdev-be-ede3ccg8dxd3awbw.southindia-01.azurewebsites.net/leave/reset-all");
       alert(res.data.message);
       setData([]); // clear yearly table instantly
     } catch (err) {

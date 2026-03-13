@@ -55,7 +55,7 @@ function ChangePassword() {
       const accessToken = localStorage.getItem("accessToken"); // from your login response
 
       const res = await axios.post(
-        "https://api-emsdev-be-epb9fbg0e7ewese6.southindia-01.azurewebsites.net/change-password",
+        "https://api-tmsdev-be-ede3ccg8dxd3awbw.southindia-01.azurewebsites.net/change-password",
         {
           currentPassword,
           newPassword,

@@ -19,7 +19,7 @@ function EmployeeApplyLeave({ user, onLeaveApplied }) {
   //   const fetchWeeklyOffs = async () => {
   //     try {
   //       const res = await axios.get(
-  //         `https://api-emsdev-be-epb9fbg0e7ewese6.southindia-01.azurewebsites.net/admin/weeklyoff/${new Date().getFullYear()}`
+  //         `https://api-tmsdev-be-ede3ccg8dxd3awbw.southindia-01.azurewebsites.net/admin/weeklyoff/${new Date().getFullYear()}`
   //       );
 
   //       // 🛠️ Ensure it's always an array of date strings
@@ -63,7 +63,7 @@ function EmployeeApplyLeave({ user, onLeaveApplied }) {
     const fetchWeeklyOffs = async () => {
       try {
         const res = await axios.get(
-          `https://api-emsdev-be-epb9fbg0e7ewese6.southindia-01.azurewebsites.net/admin/weeklyoff/${new Date().getFullYear()}`
+          `https://api-tmsdev-be-ede3ccg8dxd3awbw.southindia-01.azurewebsites.net/admin/weeklyoff/${new Date().getFullYear()}`
         );
 
         // 👇 Extract weekly off data safely
@@ -94,7 +94,7 @@ function EmployeeApplyLeave({ user, onLeaveApplied }) {
     const fetchManager = async () => {
       if (!user?.reportingManager) return;
       try {
-        const res = await axios.get(`https://api-emsdev-be-epb9fbg0e7ewese6.southindia-01.azurewebsites.net/users/${user.reportingManager}`);
+        const res = await axios.get(`https://api-tmsdev-be-ede3ccg8dxd3awbw.southindia-01.azurewebsites.net/users/${user.reportingManager}`);
         setManager(res.data);
       } catch (err) {
         console.error("Error fetching manager:", err);
@@ -208,7 +208,7 @@ const maxDate = futureDate.toISOString().split("T")[0];
 
     try {
       // -------------------- ✅ APPLY LEAVE (BACKEND HANDLES OVERLAP) --------------------
-      await axios.post("https://api-emsdev-be-epb9fbg0e7ewese6.southindia-01.azurewebsites.net/leave/apply", {
+      await axios.post("https://api-tmsdev-be-ede3ccg8dxd3awbw.southindia-01.azurewebsites.net/leave/apply", {
         employeeId: user._id,
         leaveType: form.leaveType,
         dateFrom: form.dateFrom,

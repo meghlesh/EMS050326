@@ -31,7 +31,7 @@ function ApplyRegularization({ user, selectedRecord }) {
   const fetchCounts = async () => {
     try {
       const res = await axios.get(
-        `https://api-emsdev-be-epb9fbg0e7ewese6.southindia-01.azurewebsites.net/attendance/regularization/my/${user._id}`
+        `https://api-tmsdev-be-ede3ccg8dxd3awbw.southindia-01.azurewebsites.net/attendance/regularization/my/${user._id}`
       );
 
       const requests = res.data || [];
@@ -65,7 +65,7 @@ function ApplyRegularization({ user, selectedRecord }) {
     const fetchWeeklyOffs = async () => {
       try {
         const res = await axios.get(
-          `https://api-emsdev-be-epb9fbg0e7ewese6.southindia-01.azurewebsites.net/admin/weeklyoff/${new Date().getFullYear()}`
+          `https://api-tmsdev-be-ede3ccg8dxd3awbw.southindia-01.azurewebsites.net/admin/weeklyoff/${new Date().getFullYear()}`
         );
 
         const weeklyData = res.data?.data || res.data || {};
@@ -103,7 +103,7 @@ function ApplyRegularization({ user, selectedRecord }) {
   useEffect(() => {
     const fetchAttendance = async () => {
       try {
-        const res = await axios.get(`https://api-emsdev-be-epb9fbg0e7ewese6.southindia-01.azurewebsites.net/attendance/regularization/my/${user._id}`
+        const res = await axios.get(`https://api-tmsdev-be-ede3ccg8dxd3awbw.southindia-01.azurewebsites.net/attendance/regularization/my/${user._id}`
         );
         setAttendance(res.data);
         console.log(res.data)
@@ -306,7 +306,7 @@ function ApplyRegularization({ user, selectedRecord }) {
 
 
       // 1️⃣ Fetch existing leaves for the employee
-      const leaveRes = await axios.get(`https://api-emsdev-be-epb9fbg0e7ewese6.southindia-01.azurewebsites.net/leave/my/${user._id}`);
+      const leaveRes = await axios.get(`https://api-tmsdev-be-ede3ccg8dxd3awbw.southindia-01.azurewebsites.net/leave/my/${user._id}`);
       const leaves = leaveRes.data || [];
 
       // 🔹 Check if the selected date falls in any leave range
@@ -325,7 +325,7 @@ function ApplyRegularization({ user, selectedRecord }) {
       }
       // 2️⃣ Fetch holidays dynamically
       const currentYear = new Date().getFullYear();
-      const holidaysRes = await axios.get("https://api-emsdev-be-epb9fbg0e7ewese6.southindia-01.azurewebsites.net/getHolidays");
+      const holidaysRes = await axios.get("https://api-tmsdev-be-ede3ccg8dxd3awbw.southindia-01.azurewebsites.net/getHolidays");
       const holidays = holidaysRes.data.filter(
         (h) => new Date(h.date).getFullYear() === currentYear
       );
@@ -346,7 +346,7 @@ function ApplyRegularization({ user, selectedRecord }) {
 
       // 3 Fetch existing regularization requests (✅ fixed link)
       const regRes = await axios.get(
-        `https://api-emsdev-be-epb9fbg0e7ewese6.southindia-01.azurewebsites.net/attendance/regularization/my/${user._id}`
+        `https://api-tmsdev-be-ede3ccg8dxd3awbw.southindia-01.azurewebsites.net/attendance/regularization/my/${user._id}`
       );
       const regularizations = regRes.data || [];
 
@@ -370,7 +370,7 @@ function ApplyRegularization({ user, selectedRecord }) {
       // 3️⃣ If all checks pass → Submit regularization request
       const token = localStorage.getItem("accessToken");
       const authAxios = axios.create({
-        baseURL: "https://api-emsdev-be-epb9fbg0e7ewese6.southindia-01.azurewebsites.net",
+        baseURL: "https://api-tmsdev-be-ede3ccg8dxd3awbw.southindia-01.azurewebsites.net",
         headers: { Authorization: `Bearer ${token}` },
       });
 

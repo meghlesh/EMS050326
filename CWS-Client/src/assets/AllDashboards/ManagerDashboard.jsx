@@ -46,12 +46,12 @@ function ManagerDashboard({ user }) {
     const fetchData = async () => {
       try {
         const leavesRes = await axios.get(
-          `https://api-emsdev-be-epb9fbg0e7ewese6.southindia-01.azurewebsites.net/leaves/manager/${user._id}`
+          `https://api-tmsdev-be-ede3ccg8dxd3awbw.southindia-01.azurewebsites.net/leaves/manager/${user._id}`
         );
         setLeaves(leavesRes.data);
 
         const regRes = await axios.get(
-          `https://api-emsdev-be-epb9fbg0e7ewese6.southindia-01.azurewebsites.net/regularization/manager/${user._id}`
+          `https://api-tmsdev-be-ede3ccg8dxd3awbw.southindia-01.azurewebsites.net/regularization/manager/${user._id}`
         );
         setRegularizations(regRes.data);
       } catch (err) {
@@ -85,7 +85,7 @@ function ManagerDashboard({ user }) {
   const updateLeaveStatus = async (leaveId, status) => {
     try {
       const res = await axios.put(
-        `https://api-emsdev-be-epb9fbg0e7ewese6.southindia-01.azurewebsites.net/leave/${leaveId}/status`,
+        `https://api-tmsdev-be-ede3ccg8dxd3awbw.southindia-01.azurewebsites.net/leave/${leaveId}/status`,
         {
           status,
           userId: user._id,
@@ -105,7 +105,7 @@ function ManagerDashboard({ user }) {
   const updateRegularizationStatus = async (attendanceId, status) => {
     try {
       const res = await axios.put(
-        `https://api-emsdev-be-epb9fbg0e7ewese6.southindia-01.azurewebsites.net/attendance/regularization/${attendanceId}/status`,
+        `https://api-tmsdev-be-ede3ccg8dxd3awbw.southindia-01.azurewebsites.net/attendance/regularization/${attendanceId}/status`,
         {
           status,
           approvedBy: user._id,

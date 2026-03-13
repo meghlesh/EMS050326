@@ -13,7 +13,7 @@ function Notification({ userId }) {
 
     try {
       const res = await axios.get(
-        `https://api-emsdev-be-epb9fbg0e7ewese6.southindia-01.azurewebsites.net/notifications/${userId}`,
+        `https://api-tmsdev-be-ede3ccg8dxd3awbw.southindia-01.azurewebsites.net/notifications/${userId}`,
       );
 
       // Filter last 15 days notifications
@@ -38,7 +38,7 @@ function Notification({ userId }) {
   const handleNotificationClick = async (n) => {
     try {
       // Mark as read in backend
-      await axios.put(`https://api-emsdev-be-epb9fbg0e7ewese6.southindia-01.azurewebsites.net/notifications/${n._id}/read`);
+      await axios.put(`https://api-tmsdev-be-ede3ccg8dxd3awbw.southindia-01.azurewebsites.net/notifications/${n._id}/read`);
 
       // Update state locally for instant UI feedback
       setNotifications((prev) =>
@@ -81,7 +81,7 @@ function Notification({ userId }) {
   //   const fetchNotifications = async () => {
   //     try {
   //       const res = await axios.get(
-  //         `https://api-emsdev-be-epb9fbg0e7ewese6.southindia-01.azurewebsites.net/notifications/${userId}`
+  //         `https://api-tmsdev-be-ede3ccg8dxd3awbw.southindia-01.azurewebsites.net/notifications/${userId}`
   //       );
 
   //       // Filter last 15 days notifications

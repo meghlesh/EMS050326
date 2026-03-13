@@ -25,11 +25,11 @@ function EmployeeFullAttendance() {
         setLoading(true);
         const token = localStorage.getItem("accessToken");
         const authAxios = axios.create({
-          baseURL: " https://api-emsdev-be-epb9fbg0e7ewese6.southindia-01.azurewebsites.net",
+          baseURL: " https://api-tmsdev-be-ede3ccg8dxd3awbw.southindia-01.azurewebsites.net",
           headers: { Authorization: `Bearer ${token}` },
         });
 
-        const empRes = await axios.get(`https://api-emsdev-be-epb9fbg0e7ewese6.southindia-01.azurewebsites.net/employees/${empId}`);
+        const empRes = await axios.get(`https://api-tmsdev-be-ede3ccg8dxd3awbw.southindia-01.azurewebsites.net/employees/${empId}`);
         setEmployee(empRes.data);
 
         const attRes = await authAxios.get(`/attendance/all/${empId}`);

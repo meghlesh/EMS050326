@@ -44,7 +44,7 @@ function Header({ user, handleLogout }) {
             src={
               user?.image
                 ? ` 
-https://api-emsdev-be-epb9fbg0e7ewese6.southindia-01.azurewebsites.net/uploads/${user.image}`
+https://api-tmsdev-be-ede3ccg8dxd3awbw.southindia-01.azurewebsites.net/uploads/${user.image}`
                 : "/myprofile.jpg"
             }
             alt="Profile"
@@ -66,14 +66,14 @@ https://api-emsdev-be-epb9fbg0e7ewese6.southindia-01.azurewebsites.net/uploads/$
             <img
               // src={
               //   user?.image
-              //     ?`https://api-emsdev-be-epb9fbg0e7ewese6.southindia-01.azurewebsites.net/image/uploads/${user.image}`
+              //     ?`https://api-tmsdev-be-ede3ccg8dxd3awbw.southindia-01.azurewebsites.net/image/uploads/${user.image}`
               //     : "/myprofile.jpg"
               // }
                src={
     user?.image
       ? user.image.startsWith("http")
         ? user.image
-        : `https://api-emsdev-be-epb9fbg0e7ewese6.southindia-01.azurewebsites.net/uploads/${user.image}`
+        : `https://api-tmsdev-be-ede3ccg8dxd3awbw.southindia-01.azurewebsites.net/uploads/${user.image}`
       : "/myprofile.jpg"
   }
               alt="Profile"
@@ -94,7 +94,7 @@ https://api-emsdev-be-epb9fbg0e7ewese6.southindia-01.azurewebsites.net/uploads/$
                   <img
                     // src={
                     //   user?.image
-                    //     ? `https://api-emsdev-be-epb9fbg0e7ewese6.southindia-01.azurewebsites.net/image/uploads/${user.image}`
+                    //     ? `https://api-tmsdev-be-ede3ccg8dxd3awbw.southindia-01.azurewebsites.net/image/uploads/${user.image}`
                     //     : "/myprofile.jpg"
                     // }
 
@@ -102,7 +102,7 @@ https://api-emsdev-be-epb9fbg0e7ewese6.southindia-01.azurewebsites.net/uploads/$
     user?.image
       ? user.image.startsWith("http")
         ? user.image
-        : `https://api-emsdev-be-epb9fbg0e7ewese6.southindia-01.azurewebsites.net/uploads/${user.image}`
+        : `https://api-tmsdev-be-ede3ccg8dxd3awbw.southindia-01.azurewebsites.net/uploads/${user.image}`
       : "/myprofile.jpg"
   }
                     alt="Profile"

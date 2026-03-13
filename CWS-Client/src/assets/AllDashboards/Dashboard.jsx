@@ -73,7 +73,7 @@ function Dashboard() {
 
     let isMounted = true;
     axios
-      .get("https://api-emsdev-be-epb9fbg0e7ewese6.southindia-01.azurewebsites.net/me", {
+      .get("https://api-tmsdev-be-ede3ccg8dxd3awbw.southindia-01.azurewebsites.net/me", {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((res) => {
@@ -100,7 +100,7 @@ function Dashboard() {
     }
 
     axios
-      .get(`https://api-emsdev-be-epb9fbg0e7ewese6.southindia-01.azurewebsites.net/me`, {
+      .get(`https://api-tmsdev-be-ede3ccg8dxd3awbw.southindia-01.azurewebsites.net/me`, {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((res) => setUser(res.data))
@@ -118,7 +118,7 @@ function Dashboard() {
       setIsLoggingOut(true);
       const refreshToken = localStorage.getItem("refreshToken");
       // call backend to invalidate refresh token (optional)
-      await axios.post("https://api-emsdev-be-epb9fbg0e7ewese6.southindia-01.azurewebsites.net/logout", { refreshToken });
+      await axios.post("https://api-tmsdev-be-ede3ccg8dxd3awbw.southindia-01.azurewebsites.net/logout", { refreshToken });
 
       // clear everything
       // ❗ Clear active browser session

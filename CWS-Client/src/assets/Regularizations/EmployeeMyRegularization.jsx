@@ -24,7 +24,7 @@ function EmployeeMyRegularization({ employeeId, refreshKey }) {
     const fetchRequests = async () => {
       try {
         const res = await axios.get(
-          `https://api-emsdev-be-epb9fbg0e7ewese6.southindia-01.azurewebsites.net/attendance/regularization/my/${employeeId}`,
+          `https://api-tmsdev-be-ede3ccg8dxd3awbw.southindia-01.azurewebsites.net/attendance/regularization/my/${employeeId}`,
         );
         // ✅ Sort newest first (based on createdAt or request date)
         const sortedData = res.data.sort(
@@ -100,7 +100,7 @@ function EmployeeMyRegularization({ employeeId, refreshKey }) {
 
     try {
       await axios.delete(
-        `https://api-emsdev-be-epb9fbg0e7ewese6.southindia-01.azurewebsites.net/attendance/regularization/${id}`,
+        `https://api-tmsdev-be-ede3ccg8dxd3awbw.southindia-01.azurewebsites.net/attendance/regularization/${id}`,
       );
       setRequests(requests.filter((req) => req._id !== id));
     } catch (err) {

@@ -21,7 +21,7 @@ function MyProfile({ user }) {
       setRemovingImage(true);
 
       const res = await axios.delete(
-        `https://api-emsdev-be-epb9fbg0e7ewese6.southindia-01.azurewebsites.net/employees/${user._id}/image`,
+        `https://api-tmsdev-be-ede3ccg8dxd3awbw.southindia-01.azurewebsites.net/employees/${user._id}/image`,
       );
 
       if (res?.data?.employee) {
@@ -48,7 +48,7 @@ function MyProfile({ user }) {
     const fetchProfile = async () => {
       try {
         const res = await axios.get(
-          `https://api-emsdev-be-epb9fbg0e7ewese6.southindia-01.azurewebsites.net/employees/${user._id}`,
+          `https://api-tmsdev-be-ede3ccg8dxd3awbw.southindia-01.azurewebsites.net/employees/${user._id}`,
         );
         setProfile(res.data);
         setFormData({
@@ -160,7 +160,7 @@ function MyProfile({ user }) {
         }
       });
 
-      await axios.put(`https://api-emsdev-be-epb9fbg0e7ewese6.southindia-01.azurewebsites.net/employees/${user._id}`, data, {
+      await axios.put(`https://api-tmsdev-be-ede3ccg8dxd3awbw.southindia-01.azurewebsites.net/employees/${user._id}`, data, {
         headers: { "Content-Type": "multipart/form-data" },
       });
 
@@ -169,7 +169,7 @@ function MyProfile({ user }) {
 
       // Refresh profile
       const updated = await axios.get(
-        `https://api-emsdev-be-epb9fbg0e7ewese6.southindia-01.azurewebsites.net/employees/${user._id}`,
+        `https://api-tmsdev-be-ede3ccg8dxd3awbw.southindia-01.azurewebsites.net/employees/${user._id}`,
       );
       setProfile(updated.data);
     } catch (err) {
@@ -183,7 +183,7 @@ function MyProfile({ user }) {
     if (file instanceof File) return file.name;
     return (
       <a
-        href={`https://api-emsdev-be-epb9fbg0e7ewese6.southindia-01.azurewebsites.net/uploads/${file}`}
+        href={`https://api-tmsdev-be-ede3ccg8dxd3awbw.southindia-01.azurewebsites.net/uploads/${file}`}
         target="_blank"
         rel="noreferrer"
       >
@@ -329,7 +329,7 @@ function MyProfile({ user }) {
                     src={
                       profile.image?.startsWith("http")
                         ? profile.image
-                        : `https://api-emsdev-be-epb9fbg0e7ewese6.southindia-01.azurewebsites.net/image/${profile.image}`
+                        : `https://api-tmsdev-be-ede3ccg8dxd3awbw.southindia-01.azurewebsites.net/image/${profile.image}`
                     }
                     alt="Profile"
                     style={{

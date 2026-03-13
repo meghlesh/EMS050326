@@ -18,7 +18,7 @@ function ForgotPassword() {
   const userValid = async () => {
     try {
       const res = await fetch(
-        `https://api-emsdev-be-epb9fbg0e7ewese6.southindia-01.azurewebsites.net/forgotpassword/${id}/${token}`,
+        `https://api-tmsdev-be-ede3ccg8dxd3awbw.southindia-01.azurewebsites.net/forgotpassword/${id}/${token}`,
         {
           method: "GET",
           headers: { "Content-Type": "application/json" },
@@ -50,7 +50,7 @@ function ForgotPassword() {
     }
 
     const res = await fetch(
-      `https://api-emsdev-be-epb9fbg0e7ewese6.southindia-01.azurewebsites.net/forgotpassword/${id}/${token}`,
+      `https://api-tmsdev-be-ede3ccg8dxd3awbw.southindia-01.azurewebsites.net/forgotpassword/${id}/${token}`,
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },

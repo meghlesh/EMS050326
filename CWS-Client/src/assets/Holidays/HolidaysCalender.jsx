@@ -9,7 +9,7 @@ function HolidaysCalendar() {
   useEffect(() => {
     const fetchHolidays = async () => {
       try {
-        const res = await axios.get("https://api-emsdev-be-epb9fbg0e7ewese6.southindia-01.azurewebsites.net/holidays");
+        const res = await axios.get("https://api-tmsdev-be-ede3ccg8dxd3awbw.southindia-01.azurewebsites.net/holidays");
         // Map holidays to FullCalendar event format
         const events = res.data.map(h => ({
           title: h.name,

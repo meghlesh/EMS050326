@@ -10,7 +10,7 @@ function AdminWeeklyOffSetup() {
   useEffect(() => {
     const fetchWeeklyOff = async () => {
       try {
-        const res = await axios.get(`https://api-emsdev-be-epb9fbg0e7ewese6.southindia-01.azurewebsites.net/admin/weeklyoff/${year}`);
+        const res = await axios.get(`https://api-tmsdev-be-ede3ccg8dxd3awbw.southindia-01.azurewebsites.net/admin/weeklyoff/${year}`);
         setSaturdays(res.data?.data?.saturdays || []);
       } catch (err) {
         console.error("Error fetching weekly off:", err);
@@ -28,7 +28,7 @@ function AdminWeeklyOffSetup() {
 
   const saveWeeklyOff = async () => {
     try {
-      await axios.post("https://api-emsdev-be-epb9fbg0e7ewese6.southindia-01.azurewebsites.net/admin/weeklyoff", { year, saturdays });
+      await axios.post("https://api-tmsdev-be-ede3ccg8dxd3awbw.southindia-01.azurewebsites.net/admin/weeklyoff", { year, saturdays });
       alert("✅ Weekly off updated successfully!");
     } catch (err) {
       console.error("Error saving weekly off:", err);

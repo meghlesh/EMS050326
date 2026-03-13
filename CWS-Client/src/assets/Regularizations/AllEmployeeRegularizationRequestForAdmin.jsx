@@ -27,7 +27,7 @@ function AllEmployeeRegularizationRequestForAdmin({ showBackButton = true }) {
   const fetchData = async () => {
     try {
       const token = localStorage.getItem("accessToken");
-      const res = await axios.get("https://api-emsdev-be-epb9fbg0e7ewese6.southindia-01.azurewebsites.net/attendance/regularization/all", {
+      const res = await axios.get("https://api-tmsdev-be-ede3ccg8dxd3awbw.southindia-01.azurewebsites.net/attendance/regularization/all", {
         headers: { Authorization: `Bearer ${token}` },
       });
 
@@ -53,7 +53,7 @@ function AllEmployeeRegularizationRequestForAdmin({ showBackButton = true }) {
     try {
       const token = localStorage.getItem("accessToken");
       await axios.put(
-        `https://api-emsdev-be-epb9fbg0e7ewese6.southindia-01.azurewebsites.net/attendance/regularization/${id}/status`,
+        `https://api-tmsdev-be-ede3ccg8dxd3awbw.southindia-01.azurewebsites.net/attendance/regularization/${id}/status`,
         { status },
         { headers: { Authorization: `Bearer ${token}` } }
       );

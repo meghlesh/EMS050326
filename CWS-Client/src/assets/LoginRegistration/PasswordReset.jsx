@@ -30,7 +30,7 @@ function PasswordReset() {
     setError(null); // Clear previous error
 
     try {
-      const res = await fetch("https://api-emsdev-be-epb9fbg0e7ewese6.southindia-01.azurewebsites.net/sendpasswordlink", {
+      const res = await fetch("https://api-tmsdev-be-ede3ccg8dxd3awbw.southindia-01.azurewebsites.net/sendpasswordlink", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email })

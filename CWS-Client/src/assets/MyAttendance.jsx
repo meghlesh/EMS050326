@@ -47,7 +47,7 @@ function MyAttendance({ employeeId }) {
   useEffect(() => {
     if (selectedRecord?.leaveRef?.reportingManager) {
       axios
-        .get(`https://api-emsdev-be-epb9fbg0e7ewese6.southindia-01.azurewebsites.net/users/${selectedRecord.leaveRef.reportingManager}`)
+        .get(`https://api-tmsdev-be-ede3ccg8dxd3awbw.southindia-01.azurewebsites.net/users/${selectedRecord.leaveRef.reportingManager}`)
         .then((res) => setManager(res.data))
         .catch((err) => console.error("Error fetching manager:", err));
     }
@@ -58,11 +58,11 @@ function MyAttendance({ employeeId }) {
     const fetchData = async () => {
       try {
         const [attRes, leaveRes, weeklyRes, holidayRes, regRes] = await Promise.all([
-          axios.get(`https://api-emsdev-be-epb9fbg0e7ewese6.southindia-01.azurewebsites.net/attendance/${employeeId}`),
-          axios.get(`https://api-emsdev-be-epb9fbg0e7ewese6.southindia-01.azurewebsites.net/leave/my/${employeeId}`),
-          axios.get(`https://api-emsdev-be-epb9fbg0e7ewese6.southindia-01.azurewebsites.net/admin/weeklyoff/${new Date().getFullYear()}`),
-          axios.get(`https://api-emsdev-be-epb9fbg0e7ewese6.southindia-01.azurewebsites.net/getHolidays`),
-          axios.get(`https://api-emsdev-be-epb9fbg0e7ewese6.southindia-01.azurewebsites.net/attendance/regularization/my/${employeeId}`),
+          axios.get(`https://api-tmsdev-be-ede3ccg8dxd3awbw.southindia-01.azurewebsites.net/attendance/${employeeId}`),
+          axios.get(`https://api-tmsdev-be-ede3ccg8dxd3awbw.southindia-01.azurewebsites.net/leave/my/${employeeId}`),
+          axios.get(`https://api-tmsdev-be-ede3ccg8dxd3awbw.southindia-01.azurewebsites.net/admin/weeklyoff/${new Date().getFullYear()}`),
+          axios.get(`https://api-tmsdev-be-ede3ccg8dxd3awbw.southindia-01.azurewebsites.net/getHolidays`),
+          axios.get(`https://api-tmsdev-be-ede3ccg8dxd3awbw.southindia-01.azurewebsites.net/attendance/regularization/my/${employeeId}`),
         ]);
 
         setWeeklyOff(weeklyRes.data.data?.saturdays || []);
@@ -423,7 +423,7 @@ const tileClassName = ({ date, view }) => {
     try {
       const token = localStorage.getItem("accessToken");
       const authAxios = axios.create({
-        baseURL: "https://api-emsdev-be-epb9fbg0e7ewese6.southindia-01.azurewebsites.net",
+        baseURL: "https://api-tmsdev-be-ede3ccg8dxd3awbw.southindia-01.azurewebsites.net",
         headers: { Authorization: `Bearer ${token}` },
       });
 
@@ -546,7 +546,7 @@ const tileClassName = ({ date, view }) => {
     try {
       const token = localStorage.getItem("accessToken");
       const authAxios = axios.create({
-        baseURL: "https://api-emsdev-be-epb9fbg0e7ewese6.southindia-01.azurewebsites.net",
+        baseURL: "https://api-tmsdev-be-ede3ccg8dxd3awbw.southindia-01.azurewebsites.net",
         headers: { Authorization: `Bearer ${token}` },
       });
 
@@ -613,7 +613,7 @@ const tileClassName = ({ date, view }) => {
   const token = localStorage.getItem("accessToken");
 
   const authAxios = axios.create({
-    baseURL: "https://api-emsdev-be-epb9fbg0e7ewese6.southindia-01.azurewebsites.net",
+    baseURL: "https://api-tmsdev-be-ede3ccg8dxd3awbw.southindia-01.azurewebsites.net",
     headers: { Authorization: `Bearer ${token}` },
   });
 

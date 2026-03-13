@@ -49,7 +49,7 @@ function EmployeeDashboard({ user }) {
   const token = localStorage.getItem("accessToken");
 
   const authAxios = axios.create({
-    baseURL: "https://api-emsdev-be-epb9fbg0e7ewese6.southindia-01.azurewebsites.net",
+    baseURL: "https://api-tmsdev-be-ede3ccg8dxd3awbw.southindia-01.azurewebsites.net",
     headers: { Authorization: `Bearer ${token}` },
   });
 
@@ -333,7 +333,7 @@ const handleCheckOut = async () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("https://api-emsdev-be-epb9fbg0e7ewese6.southindia-01.azurewebsites.net/leave/apply", {
+      await axios.post("https://api-tmsdev-be-ede3ccg8dxd3awbw.southindia-01.azurewebsites.net/leave/apply", {
         employeeId: user._id,
         ...form,
       });
@@ -349,8 +349,8 @@ const handleCheckOut = async () => {
     const fetchData = async () => {
       try {
         const [leaveRes, regRes] = await Promise.all([
-          axios.get(`https://api-emsdev-be-epb9fbg0e7ewese6.southindia-01.azurewebsites.net/leave/my/${user._id}`),
-          axios.get(`https://api-emsdev-be-epb9fbg0e7ewese6.southindia-01.azurewebsites.net/attendance/regularization/my/${user._id}`),
+          axios.get(`https://api-tmsdev-be-ede3ccg8dxd3awbw.southindia-01.azurewebsites.net/leave/my/${user._id}`),
+          axios.get(`https://api-tmsdev-be-ede3ccg8dxd3awbw.southindia-01.azurewebsites.net/attendance/regularization/my/${user._id}`),
 
         ]);
 

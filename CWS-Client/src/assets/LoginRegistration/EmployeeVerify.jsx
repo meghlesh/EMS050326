@@ -17,7 +17,7 @@
 //     const verifyToken = async () => {
 //       try {
 //         const res = await axios.get(
-//           `https://api-emsdev-be-epb9fbg0e7ewese6.southindia-01.azurewebsites.net/employee/verify/${id}/${token}`
+//           `https://api-tmsdev-be-ede3ccg8dxd3awbw.southindia-01.azurewebsites.net/employee/verify/${id}/${token}`
 //         );
 //         if (res.data.success) setValidLink(true);
 //       } catch (err) {
@@ -38,7 +38,7 @@
 
 //     try {
 //       const res = await axios.post(
-//         `https://api-emsdev-be-epb9fbg0e7ewese6.southindia-01.azurewebsites.net/employee/set-password`,
+//         `https://api-tmsdev-be-ede3ccg8dxd3awbw.southindia-01.azurewebsites.net/employee/set-password`,
 //         { id, token, password }
 //       );
 //       setMessage(res.data.message);
@@ -126,7 +126,7 @@ const EmployeeVerify = () => {
     const verifyToken = async () => {
       try {
         const res = await axios.get(
-          `https://api-emsdev-be-epb9fbg0e7ewese6.southindia-01.azurewebsites.net/employee/verify/${id}/${token}`
+          `https://api-tmsdev-be-ede3ccg8dxd3awbw.southindia-01.azurewebsites.net/employee/verify/${id}/${token}`
         );
         if (res.data.success) setValidLink(true);
       } catch (err) {
@@ -147,7 +147,7 @@ const EmployeeVerify = () => {
 
     try {
       const res = await axios.post(
-        `https://api-emsdev-be-epb9fbg0e7ewese6.southindia-01.azurewebsites.net/employee/set-password`,
+        `https://api-tmsdev-be-ede3ccg8dxd3awbw.southindia-01.azurewebsites.net/employee/set-password`,
         { id, token, password }
       );
       setMessage(res.data.message);

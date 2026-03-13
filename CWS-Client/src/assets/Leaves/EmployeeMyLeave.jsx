@@ -40,7 +40,7 @@ useEffect(() => {
     const fetchLeaves = async () => {
       try {
         const res = await axios.get(
-          `https://api-emsdev-be-epb9fbg0e7ewese6.southindia-01.azurewebsites.net/leave/my/${user._id}`,
+          `https://api-tmsdev-be-ede3ccg8dxd3awbw.southindia-01.azurewebsites.net/leave/my/${user._id}`,
         );
 
         console.log("raw leaves from API:", res.data);
@@ -57,7 +57,7 @@ useEffect(() => {
           if (!id) return "N/A";
           if (nameCache[id]) return nameCache[id];
           try {
-            const r = await axios.get(`https://api-emsdev-be-epb9fbg0e7ewese6.southindia-01.azurewebsites.net/users/${id}`);
+            const r = await axios.get(`https://api-tmsdev-be-ede3ccg8dxd3awbw.southindia-01.azurewebsites.net/users/${id}`);
             nameCache[id] = r.data?.name || "N/A";
             return nameCache[id];
           } catch (e) {
@@ -221,7 +221,7 @@ useEffect(() => {
     setLeaves((ls) => ls.filter((x) => x._id !== id));
 
     try {
-      const res = await fetch(`https://api-emsdev-be-epb9fbg0e7ewese6.southindia-01.azurewebsites.net/leave/${id}`, {
+      const res = await fetch(`https://api-tmsdev-be-ede3ccg8dxd3awbw.southindia-01.azurewebsites.net/leave/${id}`, {
         method: "DELETE",
         headers: { "Content-Type": "application/json" },
       });
